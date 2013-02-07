@@ -1,0 +1,50 @@
+[user]
+    name = Lukasz Ochedzan
+    email = l.ochedzan@gmail.com
+
+[core]
+    ;pager = tig
+    ;pager = less -FRSX
+    autocrlf = false
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = always
+
+[color "branch"]
+    remote = magenta
+
+[color "diff"]
+    meta = white
+
+[color "status"]
+    changed= magenta
+
+[mergetool]
+    keepBackup = false
+
+[branch]
+    autosetuprebase = always
+
+[diff]
+    tool = /usr/bin/vimdiff
+
+[difftool]
+    prompt = false
+
+[alias]
+        lg = log --pretty=format:'%C(bold)%h%Creset -%C(yellow)%d%Creset %C(bold blue)<%an>%Creset %Cgreen(%cr)\n          %s' --abbrev-commit --date=relative --left-right
+        hist = log --graph --pretty=format:'%C(black white reverse)%ad%Creset %C(yellow bold)%h%Creset %C(bold blue)<%an>%Creset %s' --date=iso8601 --left-right
+        st = log --graph --color --all --decorate --oneline
+        vimdiff=difftool -y -t vimdiff
+        sttaus = status
+
+[pretty]
+    # tut: http://gitimmersion.com/lab_10.html
+    # ref: http://linux.die.net/man/1/git-log
+    # Result: <short-sha> <commit-message> (<pointer-names>) -- <commit-author-name>; <relative-time>
+    nice = "%C(yellow)%h%C(reset) %C(white)%s%C(cyan)%d%C(reset) -- %an; %ar"
+

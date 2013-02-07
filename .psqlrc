@@ -1,0 +1,6 @@
+\set PROMPT1 '%[%033[1;33;40m%]%M[%n] %/ %`date +%H:%M:%S` %[%033[0m%] \n%x%# '
+
+\pset null '- null -'
+\timing
+\pset pager always
+
