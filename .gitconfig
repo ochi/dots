@@ -49,7 +49,7 @@
     nice = "%C(yellow)%h%C(reset) %C(white)%s%C(cyan)%d%C(reset) -- %an; %ar"
 
 [push]
-        default = tracking
+        default = upstream
 
 [rerere]
         enabled = true
