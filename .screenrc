@@ -1,5 +1,5 @@
-# Change scrollback to 10000 lines
-defscrollback 10000
+# Change scrollback to 100000 lines
+defscrollback 100000
 
 vbell on
 vbell_msg "bell on %t (%n)"
@@ -13,6 +13,9 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 
 bindkey -k F1 prev
 bindkey -k F2 next
+
+# change ctrl+a to ctrl+b (allow tmux in screen)
+escape ^Bb
 
 # From Stephen Shirley
 # Don't block command output if the terminal stops responding
