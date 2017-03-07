@@ -1,28 +1,26 @@
-" konfig dla vim
+" ochi's vim
 set nocompatible    " Use Vim defaults instead of 100% vi compatibility
 set backupcopy=yes
 set viminfo='20,\"50,:20
 set history=500
-syntax on
+
 set showcmd     " Show (partial) command in status line.
-" zaeksportowane z trustixa
+" exported from trustixa
 set nomodeline
 set bs=2                " allow backspacing over everything in insert mode
-" tabulatory wstawia spacje zamiast tabow
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-" podswietlanie skladni na czarnym
-set bg=dark
-" bez automatycznych wciec
+
+" no automatic indentations
 set noai
 set paste
-" sprytne wyszukiwanie pomija wielkosc liter
+
 set ignorecase
-" gdy wszystkie litery sa male przy wyszukiwaniu to pomija wielkosc liter
-" gdy pojawiaja sie duze znaki to nie jest pomijana wielkosc liter
 set smartcase
+
 " Always show status line
 set ls=2
 if has('statusline')
@@ -56,13 +54,13 @@ if has('statusline')
    endif
 endif
 
-" moje dodatkowe komendy
-set wildmenu
-set wildmode=list:longest,full
+syntax on
+" assume black bg for syntax highlighting
+set bg=dark
+:hi LineNr ctermfg=darkgray ctermbg=black
 
 " use <F6> to toggle line numbers
 nmap <silent> <F6> :set number!<CR>
-:hi LineNr ctermfg=darkgray ctermbg=black
 
 " use <F7> <F8> to move between tabs
 nmap <silent> <F7> :tabp<CR>
@@ -71,10 +69,10 @@ nmap <silent> <F8> :tabn<CR>
 " save & execute
 :map <F2> <Esc>:w<CR>:!php %<CR>
 
-" page down with <Space>
-nmap <Space> <PageDown>
+set wildmenu
+set wildmode=list:longest,full
 
-" KOMENDY WYKONYWANE ZAWSZE PO URUCHOMIENIU PLIKU
+" always after opening the file
 :set ruler
 :set number
 :set hlsearch
