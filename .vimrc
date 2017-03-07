@@ -68,10 +68,13 @@ nmap <silent> <F6> :set number!<CR>
 nmap <silent> <F7> :tabp<CR>
 nmap <silent> <F8> :tabn<CR>
 
+" save & execute
+:map <F2> <Esc>:w<CR>:!php %<CR>
+
 " page down with <Space>
 nmap <Space> <PageDown>
 
 " KOMENDY WYKONYWANE ZAWSZE PO URUCHOMIENIU PLIKU
 :set ruler
 :set number
-
+:set hlsearch
