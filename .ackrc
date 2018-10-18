@@ -1,2 +1,3 @@
 --type-add=html=tpl
 --type-add=html=ini
+--type-add=html=xhtml
